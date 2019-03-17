@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
-struct hash_chain {
+/*struct hash_chain {
   int digest_size;
   int chain_length;
   uint8_t *data;
@@ -173,33 +173,37 @@ int main(int argc, char **argv)
 {
   	OpenSSL_add_all_digests();
     	char funkcia[30];
+	char retazec[30];
+	int hash = 0;
 	printf("Zadajte jednu z hashovacich funkcii: sha1 / sha256 / sha512\n");
     scanf("%s", &funkcia);
     if (strcmp(funkcia, "sha1") == 0) 
 {
-printf("Podporovana funkcia:\n");
+printf("Podporovana funkcia\n");
 
   // do something
 } 
 else if (strcmp(funkcia, "sha256") == 0)
 {
-printf("Podporovana funkcia:\n");
+printf("Podporovana funkcia\n");
 
   // do something else
 }else if (strcmp(funkcia, "sha512") == 0)
 {
- printf("Podporovana funkcia:\n");
+ printf("Podporovana funkcia\n");
 }
 
 /* more else if clauses */
 else /* default: */
 {
-printf("Nepodporovana funkcia:\n");
+printf("Nepodporovana funkcia!\n");
 return -1;
 }
-printf("ahoj");
+printf("Zadajte max dlzku hashu\n");
+    scanf("%d", &hash);
 
-int rv;
+printf("Zadajte retazec, ktory bude hashovany\n");
+    scanf("%s", &retazec);
 
 /* if (strcmp(argv[1], "create") == 0) {
     rv = cmd_create(argc - 1, argv + 1);
@@ -210,6 +214,6 @@ int rv;
     rv = EXIT_FAILURE;
   }
 */
-  EVP_cleanup();
+ // EVP_cleanup();
   return 0;
 }
