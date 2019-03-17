@@ -1,3 +1,7 @@
+Doinštalovať OpenSSL
+-----
+    $ apt-get install openssl
+    
 Build origo program
 -----
 
